@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Especial 💖</title>
+  
+  <style>
+    body {
+      background: linear-gradient(to right, #f8e1f4, #ffe0e0);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 2s ease-in;
+    }
+    .card h1 {
+      color: #cc6699;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .card p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* Espaço entre os botões */
+      align-items: center;
+    }
+    .button {
+      background-color: #cc6699;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      width: 80%; /* Botões mais largos em celular */
+      max-width: 250px;
+    }
+    .button:hover {
+      background-color: #e07baf;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Oii meu bem 💖</h1>
+  <p>O que você acha de nós saímos no próximo final de semana?<br>
+    Eu fiz com muito carinho, mesmo tendo dado um pouquinho de trabalho, tudo por você ✨</p>
+  <p>Clique primeiro na música...✨</p>
+  <div class="button-container">
+    <a href="#" class="button" onclick="aceitarConvite()">Aceitas? 💌</a>
+    <a href="#" class="button" onclick="musica()">Música 💌</a>
+  </div>
+</div>
+
+<audio controls id="musica" loop>
+  <source src="audio/SZA.mp3" type="audio/mpeg">
+  <source src="audio/SZA.mp3" type="audio/mp3">
+  Seu navegador não suporta áudio.
+</audio>
+
+<script>
+function musica() {
+  const musica = document.getElementById('musica');
+  musica.play();
+  alert('SZA 💖');
+}
+</script>
+
+<script>
+function aceitarConvite() {
+  const musica = document.getElementById('musica');
+  musica.play();
+  alert('Ebaaa, eu vou fazer de tudo pra você gostar.... 💖');
+}
+</script>
+
+</body>
+</html>
